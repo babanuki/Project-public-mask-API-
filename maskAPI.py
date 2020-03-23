@@ -5,7 +5,7 @@ import sys
 url="https://8oi9s0nnth.apigw.ntruss.com/corona19-masks/v1"
 
 print("마스크의 재고가 남아 있는 판매처의 정보가 출력됩니다.")
-print("주소를 입력해주세요. (시군구의 정보가 필요합니다.)")
+print("주소를 입력해주세요. (시군구의 정보만 필요합니다.)")
 
 Inp1=input()
 
@@ -25,7 +25,7 @@ for s in sales:
     if (Inp2 not in s["addr"]):
         continue
     
-    if (s["remain_stat"]!="empty") and (s["remain_stat"]!="break"):
+    if (s["remain_stat"]!="empty") and (s["remain_stat"]!="break") and (s["remain_stat"]!="None"):
         cnt+=1
 
         print(str(cnt)+")")
